@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
 			countryMap.put(c.getCountryId(), c.getCountryName());
 		});
 
-		return null;
+		return countryMap;
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class UserServiceImpl implements UserService {
 
 		List<CityEntity> citiesList = cityRepo.getCities(sid);
 		citiesList.forEach(p -> {
-			cityMap.put(p.getCityId(), p.getCityName());
+			cityMap.put(p.getCityId(),p.getCityName());
 
 		});
 		return cityMap;
