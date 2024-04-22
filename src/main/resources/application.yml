@@ -1,28 +1,65 @@
+#server:
+#  port: 8080
+#spring:
+#  application:
+#    name: User_manageMent_App
+#  datasource:
+#    password: Natabar@143
+#    url: jdbc:mysql://localhost:3306/jrtp27
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#  mail:
+#    host: smtp.gmail.com
+#    password: uewn pgcs wpkp tkci
+#    port: 587
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#    username: natabarpradhan791@gmail.com
+#    #application Data
+#app:
+#  messages:
+#    dupEmail: Duplicate Email
+#    regSucc: User Registered
+#    regFail: Registration Failed
+#    invalidCredentials: Invalid Credentials
+#    pwdMatchErr: New Pwd and Confirm Pwd should be same
+#    pwdUpdateErr: Password Update Failed
+#    oldPwdErr: Given Old pwd is wrong
 server:
   port: 8080
+
 spring:
   application:
     name: User_manageMent_App
   datasource:
-    password: Natabar@143
-    url: jdbc:mysql://localhost:3306/jrtp27
-    username: root
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-  mail:
-    host: smtp.gmail.com
-    password: uewn pgcs wpkp tkci
-    port: 587
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-    username: natabarpradhan791@gmail.com
-    #application Data
+
+mail:
+  host: smtp.gmail.com
+  password: uewn pgcs wpkp tkci
+  port: 587
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+  username: natabarpradhan791@gmail.com
+
 app:
   messages:
     dupEmail: Duplicate Email
@@ -32,6 +69,7 @@ app:
     pwdMatchErr: New Pwd and Confirm Pwd should be same
     pwdUpdateErr: Password Update Failed
     oldPwdErr: Given Old pwd is wrong
+
 
   
   
