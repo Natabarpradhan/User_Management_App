@@ -23,4 +23,5 @@ public interface UserService {
 	public boolean resetPwd(ResetPwdDto pwdDto);
 
 	public String getQuote();
+	public String email();
 }
